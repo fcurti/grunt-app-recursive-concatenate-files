@@ -9,9 +9,13 @@
 *Make sure you've [installed npm](https://docs.npmjs.com/cli/v8/commands/npm-install) before installing Grunt.*
 *Make sure you've [installed grunt](http://gruntjs.com/getting-started) before trying out any of the examples.*
 
-# Install and run
+# Download repo, install and run
 
-Run `npm install` and then `grunt --verbose --debug --stack` to try it out.
+git clone https://github.com/fcurti/grunt-app-recursive-concatenate-files.git
+
+Run `npm install`
+
+Run `grunt --verbose --debug --stack` to try it out.
 
 Run `grunt compose --verbose --debug --stack` to run compose task only.
 
