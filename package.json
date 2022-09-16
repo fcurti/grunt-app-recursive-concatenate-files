@@ -1,0 +1,32 @@
+{
+  "name": "grunt-app-recursive-concatenate-files",
+  "version": "1.0.0",
+  "description": "Compose javascript files pass through subfolder, then uglify build files",
+  "src": "src/js",
+  "pathConfigFiles": "src/config/",
+  "dest": "build/config",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcurti/grunt-app-recursive-concatenate-files.git"
+  },
+  "keywords": [
+    "Grunt",
+    "Gruntfile",
+    "recursive"
+  ],
+  "author": "Fabio Curti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fcurti/grunt-app-recursive-concatenate-files/issues"
+  },
+  "homepage": "https://github.com/fcurti/grunt-app-recursive-concatenate-files#readme",
+  "devDependencies": {
+    "grunt": "^1.5.3",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-concat": "^2.1.0",    
+    "grunt-contrib-uglify": "^5.2.2"
+  }
+}
