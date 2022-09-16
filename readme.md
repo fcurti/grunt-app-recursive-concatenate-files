@@ -29,4 +29,4 @@ Happy to accept additional examples :)
 
 ## License
 
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+GPL-3.0 license (https://github.com/fcurti/grunt-app-recursive-concatenate-files/blob/main/LICENSE)
