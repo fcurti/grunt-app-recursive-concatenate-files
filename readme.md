@@ -15,7 +15,7 @@ Run `npm install` and then `grunt --verbose --debug --stack` to try it out.
 
 Run `grunt compose --verbose --debug --stack` to run compose task only.
 
-Run `grunt uglify --verbose --debug --stack` to run compose task only.
+Run `grunt uglify --verbose --debug --stack` to run uglify task only.
 
 Run `grunt --path=b --path=a/a1 --verbose --debug --stack` to run Grunt considering only specific path(s).
 
