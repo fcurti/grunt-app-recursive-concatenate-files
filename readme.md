@@ -6,7 +6,7 @@
 
 <img align="right" height="260" src="http://gruntjs.com/img/grunt-logo-no-wordmark.svg">
 
-*Make sure you've [installed npm](http://gruntjs.com/getting-started) before installing Grunt.*
+*Make sure you've [installed npm](https://docs.npmjs.com/cli/v8/commands/npm-install) before installing Grunt.*
 *Make sure you've [installed grunt](http://gruntjs.com/getting-started) before trying out any of the examples.*
 
 # Install and run
