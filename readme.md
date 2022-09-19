@@ -34,4 +34,4 @@ Happy to accept additional examples :)
 
 ## License
 
-GPL-3.0 license (https://github.com/fcurti/grunt-app-recursive-concatenate-files/blob/main/LICENSE)
+ISC (https://opensource.org/licenses/ISC)
