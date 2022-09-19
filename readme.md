@@ -12,10 +12,13 @@
 
 # Download repo, install and run
 
+*Download*
 git clone https://github.com/fcurti/grunt-app-recursive-concatenate-files.git
 
+*Intall packages*
 Run `npm install`
 
+*Run grunt in several ways as defined in Gruntfile*
 Run `grunt --verbose --debug --stack` to try it out.
 
 Run `grunt compose --verbose --debug --stack` to run compose task only.
