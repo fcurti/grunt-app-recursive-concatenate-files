@@ -40,4 +40,4 @@ Happy to accept additional examples :)
 
 ## License
 
-ISC (https://opensource.org/licenses/ISC)
+ISC
