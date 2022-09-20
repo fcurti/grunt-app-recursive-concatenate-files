@@ -1,6 +1,6 @@
 # grunt-app-recursive-concatenate-files
 
-> Examples of way to use [Grunt](http://gruntjs.com) to build and uglify a main file [index.js] with several file(s) on folder(s)-
+> Use [Grunt](http://gruntjs.com) to build and uglify a main file [index.js] with several file(s) on folder(s).
 
 ## System requirements
 
