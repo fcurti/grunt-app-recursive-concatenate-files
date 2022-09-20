@@ -28,6 +28,11 @@ module.exports = function(grunt) {
 			  }
 		},
 		
+		jshint: {
+			options: {force:true},
+			src: ['build/**/*.js']			
+		},
+		
 		clean: ["build"]
 				
 	});
@@ -113,11 +118,16 @@ module.exports = function(grunt) {
 	 * run all default tasks, no write: 
 	 * 	grunt --verbose --debug --stack --no-write
 	 * 
+	 * run jshint on *.min-js
+	 * 	grunt checkjs -d --verbose
+	 * 
 	 * run clean task:
 	 * 	grunt clean
 	 * 
 	 **/
 	 
 	grunt.registerTask('default', ['clean', 'compose', 'uglify']);	
+	
+	grunt.registerTask('checkjs', ['jshint']);
 	
 };

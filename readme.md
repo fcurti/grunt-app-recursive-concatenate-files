@@ -32,6 +32,9 @@ Run `grunt --path=b --path=a/a1 --verbose --debug --stack` to run Grunt consider
 
 Run `grunt clean` to remove the build directory.
 
+Run `grunt checkjs -d --verbose` to jshint on *.min.js files.
+
+
 Everything is explained in the [Gruntfile](Gruntfile.js).
 
 ## Contribute
