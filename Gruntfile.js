@@ -4,11 +4,55 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 	  
 		config: grunt.file.readJSON('package.json'),
+		properties: grunt.file.readJSON("src/properties/build.properties"),
 
 		compose: {
 			  src: ["<%= config.src %>/index.js"],
 			  pathConfigFiles:  "<%= config.pathConfigFiles %>",
 			  dest: "<%= config.dest %>",
+		},
+		
+		'string-replace': {
+			dist: {
+				files: [{
+					expand: true,
+					cwd: "<%= config.dest %>",
+					src: ['**/*.js'],
+					dest: "<%= config.dest %>",
+				}],
+				options: {
+					replacements: [{
+						pattern: /"@(.*?)@"/g,
+						replacement:  function (pattern, found) {
+							
+							if(grunt.config.data.properties[found]){
+								if(typeof grunt.config.data.properties[found] === 'number') return grunt.config.data.properties[found]
+								else return `"${grunt.config.data.properties[found]}"`
+							}
+							else{
+								grunt.log.error(`string-replace :: valore di sostituzione non individuato per: ${pattern}`)
+								return match
+							}
+						}	
+					}]
+				}
+			}
+		},
+		
+		includes: {
+		  js: {
+			options: {
+			  includeRegexp: /^(\s*)__include__\s+"(\S+)"\s*$/,
+			  includePath: "<%= config.src %>/include",
+			  duplicates: false,
+			  debug: true
+			},
+			files: [{
+			  cwd: "<%= config.dest %>",
+			  src: "**/*.js",
+			  dest: "<%= config.dest %>",
+			}],
+		  },
 		},
 		  
 		uglify: {
@@ -45,6 +89,12 @@ module.exports = function(grunt) {
 	
 	// Load the clean plugin module
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	
+	// replace value between char @ 
+	grunt.loadNpmTasks('grunt-string-replace');
+	
+	// Load the includs plugin module
+	grunt.loadNpmTasks('grunt-includes');
 
 	// compose task file
 	grunt.registerTask("compose", function () {
@@ -126,7 +176,7 @@ module.exports = function(grunt) {
 	 * 
 	 **/
 	 
-	grunt.registerTask('default', ['clean', 'compose', 'uglify']);	
+	grunt.registerTask('default', ['clean', 'compose', 'includes', 'string-replace', 'uglify']);	
 	
 	grunt.registerTask('checkjs', ['jshint']);
 	

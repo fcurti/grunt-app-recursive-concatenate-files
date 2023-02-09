@@ -1,8 +1,7 @@
 app=window.app || {};
 
 app={	
+	version: "@version@",
 	
-	printNamespace: function(n){
-		console.log('The namspace is: '+n);
-	}
+	__include__ "app.func.js"
 }
